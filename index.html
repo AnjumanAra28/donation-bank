@@ -32,7 +32,7 @@
         <div class="bg-secondary">
           <div class="flex justify-between items-center py-5 w-10/12 mx-auto">
             <div>
-              <button class="btn bg-primary font-bold">Blog</button>
+              <button id="blog-btn" class="btn bg-primary font-bold">Blog</button>
             </div>
             <div class="flex items-center gap-3">
               <img src="./assets/logo.png" alt="" />
@@ -41,7 +41,7 @@
             <div class="flex items-center gap-3">
               <img src="./assets/coin.png" alt="" />
               <p class="font-bold">
-                <span id="total-donate-amount">5500</span>
+                <span id="total-donate-amount">15500</span>
                 BDT
               </p>
             </div>
@@ -49,10 +49,16 @@
         </div>
         <!-- button section starts-->
         <div class="w-10/12 mx-auto flex justify-center my-10 gap-3">
-          <button class="btn btn-outline text-gray-700 font-bold">
+          <button
+            id="donation-btn"
+            class="btn btn-outline bg-primary text-gray-700 font-bold"
+          >
             Donation
           </button>
-          <button class="btn btn-outline text-gray-700 font-bold">
+          <button
+            id="history-btn"
+            class="btn btn-outline text-gray-700 font-bold"
+          >
             History
           </button>
         </div>
@@ -60,7 +66,10 @@
       </nav>
 
       <!-- donation card section -->
-      <section class="w-10/12 mx-auto space-y-10 mb-16">
+      <section
+        id="donation-card-section"
+        class="w-10/12 mx-auto space-y-10 mb-16"
+      >
         <!-- card-1  donate in flood N  starts-->
         <div class="border rounded-xl shadow-lg">
           <div class="hero">
@@ -92,7 +101,10 @@
                   placeholder="Write Donation Amount"
                   class="input input-bordered w-11/12"
                 />
-                <button id="donate-btn1" class="btn bg-primary w-11/12 font-bold text-xl">
+                <button
+                  id="donate-btn1"
+                  class="btn bg-primary w-11/12 font-bold text-xl"
+                >
                   Donate Now
                 </button>
               </div>
@@ -134,7 +146,10 @@
                   placeholder="Write Donation Amount"
                   class="input input-bordered w-11/12"
                 />
-                <button id="donate-btn2" class="btn bg-primary w-11/12 font-bold text-xl">
+                <button
+                  id="donate-btn2"
+                  class="btn bg-primary w-11/12 font-bold text-xl"
+                >
                   Donate Now
                 </button>
               </div>
@@ -180,7 +195,10 @@
                   placeholder="Write Donation Amount"
                   class="input input-bordered w-11/12"
                 />
-                <button id="donate-btn3" class="btn bg-primary w-11/12 font-bold text-xl">
+                <button
+                  id="donate-btn3"
+                  class="btn bg-primary w-11/12 font-bold text-xl"
+                >
                   Donate Now
                 </button>
               </div>
@@ -189,9 +207,31 @@
         </div>
         <!-- card-3 donate for quota movement ends -->
       </section>
+
+      <!-- modals section starts-->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box text-center">
+          <h3 class="text-3xl font-extrabold">Congrats!</h3>
+          <img class="w-14 mx-auto mt-4" src="./assets/coin.png" alt="" />
+          <p class="py-4">
+            You have donated for humankind <br />
+            <span class="font-bold text-xl">Successfully</span>
+          </p>
+          <div class="modal-action w-40 mx-auto">
+            <form method="dialog">
+              <button class="btn">Close Confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!-- modal section ends -->
+
+      <!-- history section starts  -->
+      <section id="history-section" class="hidden"></section>
+      <!-- history section ends -->
     </main>
     <footer class="bg-secondary h-20"></footer>
     <script src="./js/utility.js"></script>
-  <script src="./js/home.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
