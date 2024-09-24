@@ -9,6 +9,8 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
     // get card1 donate amount
     let donateValue1 = getTextValueById('donate-amount1')
 
+    document.getElementById('donate-input1').value = "";
+
     if (getInputValue<=0){
        return alert('Invalid Amount is not Acceptable');
     }
@@ -32,9 +34,7 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
     createHistoryElement(getInputValue ,donationArea);
 
     // open modal
-    my_modal_5.showModal()
-
-    document.getElementById('donate-input1').value = "";
+    my_modal_5.showModal();
 })
 
 // donate 2 button
@@ -45,6 +45,8 @@ document.getElementById('donate-btn2').addEventListener('click',function(){
     const totalDonateAmountValue = getTextValueById('total-donate-amount');
     // get card2 donate amount 
     let donateValue1 = getTextValueById('donate-amount2')
+
+    document.getElementById('donate-input2').value = "";
     
     if(isNaN(getInputValue)){
         return alert('Put A Valid Input Number')
@@ -70,8 +72,6 @@ document.getElementById('donate-btn2').addEventListener('click',function(){
 
     // open modal
     my_modal_5.showModal()
-
-    document.getElementById('donate-input2').value = "";
 })
 
 // donate 3 button
@@ -82,6 +82,8 @@ document.getElementById('donate-btn3').addEventListener('click',function(){
     const totalDonateAmountValue = getTextValueById('total-donate-amount');
     // get card3 donate amount
     let donateValue1 = getTextValueById('donate-amount3')
+    
+    document.getElementById('donate-input3').value = "";
 
     if (getInputValue<=0){
        return alert('Negative Amount is not Acceptable');
@@ -109,7 +111,7 @@ document.getElementById('donate-btn3').addEventListener('click',function(){
     // open modal
     my_modal_5.showModal();
 
-    document.getElementById('donate-input3').value = "";
+    
 })
 
 // show history section and hide donation section
