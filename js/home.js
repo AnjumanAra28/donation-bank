@@ -4,25 +4,28 @@ let totalDonateAmount = document.getElementById('total-donate-amount');
 document.getElementById('donate-btn1').addEventListener('click',function(){
     // get donate amount
     const getInputValue = getInputValueById('donate-input1')
+    // get total amount
+    const totalDonateAmountValue = getTextValueById('total-donate-amount');
+    // get card1 donate amount
+    let donateValue1 = getTextValueById('donate-amount1')
 
     if (getInputValue<=0){
-       return alert('Negative Amount is not Acceptable');
+       return alert('Invalid Amount is not Acceptable');
     }
     else if(isNaN(getInputValue)){
-        return alert('Put An Valid Input Number')
+        return alert('Put A Valid Input Number')
+    }
+    else if(getInputValue>totalDonateAmountValue){
+        return alert('Input value can not be greater than total amount')
     }
 
-    let donateValue1 = getTextValueById('donate-amount1')
     // update card1 donate value
     const newDonateAmount = donateValue1 + getInputValue;
     document.getElementById('donate-amount1').innerText = newDonateAmount;
+
     // update total donate value
-    const totalDonateAmountValue = getTextValueById('total-donate-amount');
     const newTotalDonateAmount = totalDonateAmountValue - getInputValue;
     document.getElementById('total-donate-amount').innerText = newTotalDonateAmount;
-
-    // modal open
-    // document.getElementById('my_modal_5').showModal();
 
     // create history element
     const donationArea = 'Donated for Flood at Noakhali, Bangladesh'
@@ -30,26 +33,34 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
 
     // open modal
     my_modal_5.showModal()
+
+    document.getElementById('donate-input1').value = "";
 })
 
 // donate 2 button
 document.getElementById('donate-btn2').addEventListener('click',function(){
     // get donate amount
-    const getInputValue = getInputValueById('donate-input2')
+    const getInputValue = getInputValueById('donate-input2');
+    // get total amount
+    const totalDonateAmountValue = getTextValueById('total-donate-amount');
+    // get card2 donate amount 
+    let donateValue1 = getTextValueById('donate-amount2')
     
-    if (getInputValue<=0){
-       return alert('Negative Amount is not Acceptable');
-    }
-    else if(isNaN(getInputValue)){
+    if(isNaN(getInputValue)){
         return alert('Put A Valid Input Number')
     }
+    else if (getInputValue<=0){
+       return alert('Negative Amount is not Acceptable');
+    }
+    else if(getInputValue>totalDonateAmountValue){
+        return alert('Input value can not be greater than total amount')
+    }
 
-    let donateValue1 = getTextValueById('donate-amount2')
     // update card2 donate value
     const newDonateAmount = donateValue1 + getInputValue;
     document.getElementById('donate-amount2').innerText = newDonateAmount;
+
     // update total donate value
-    const totalDonateAmountValue = getTextValueById('total-donate-amount');
     const newTotalDonateAmount = totalDonateAmountValue - getInputValue;
     document.getElementById('total-donate-amount').innerText = newTotalDonateAmount;
 
@@ -59,12 +70,18 @@ document.getElementById('donate-btn2').addEventListener('click',function(){
 
     // open modal
     my_modal_5.showModal()
+
+    document.getElementById('donate-input2').value = "";
 })
 
 // donate 3 button
 document.getElementById('donate-btn3').addEventListener('click',function(){
     // get donate amount
     const getInputValue = getInputValueById('donate-input3')
+    // get total donate amount
+    const totalDonateAmountValue = getTextValueById('total-donate-amount');
+    // get card3 donate amount
+    let donateValue1 = getTextValueById('donate-amount3')
 
     if (getInputValue<=0){
        return alert('Negative Amount is not Acceptable');
@@ -72,13 +89,16 @@ document.getElementById('donate-btn3').addEventListener('click',function(){
     else if(isNaN(getInputValue)){
         return alert('Put A Valid Input Number')
     }
-
-    let donateValue1 = getTextValueById('donate-amount3')
+    else if(getInputValue>totalDonateAmountValue){
+        return alert('Input value can not be greater than total amount')
+    }
+    
+    
     // update card3 donate value
     const newDonateAmount = donateValue1 + getInputValue;
     document.getElementById('donate-amount3').innerText = newDonateAmount;
+
     // update total donate value
-    const totalDonateAmountValue = getTextValueById('total-donate-amount');
     const newTotalDonateAmount = totalDonateAmountValue - getInputValue;
     document.getElementById('total-donate-amount').innerText = newTotalDonateAmount;
 
@@ -87,7 +107,9 @@ document.getElementById('donate-btn3').addEventListener('click',function(){
     createHistoryElement(getInputValue ,donationArea);
 
     // open modal
-    my_modal_5.showModal() 
+    my_modal_5.showModal();
+
+    document.getElementById('donate-input3').value = "";
 })
 
 // show history section and hide donation section

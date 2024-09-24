@@ -28,18 +28,20 @@
   <body>
     <main>
       <!-- nav bar starts -->
-      <nav>
+      <nav class="sticky top-0 z-50">
         <div class="bg-secondary">
-          <div class="flex justify-between items-center py-5 w-10/12 mx-auto">
+          <div class="flex justify-between items-center py-4 w-11/12 md:w-10/12 mx-auto">
             <div>
-              <button id="blog-btn" class="btn bg-primary font-bold">Blog</button>
+              <a href="./blog.html">
+                <button id="blog-btn" class="btn bg-primary font-bold">Blog</button>
+              </a>
             </div>
-            <div class="flex items-center gap-3">
-              <img src="./assets/logo.png" alt="" />
-              <h3 class="font-bold text-xl">Donate Bangladesh</h3>
+            <div class="flex items-center gap-1 md:gap-3">
+              <img class="w-8 md:w-16" src="./assets/logo.png" alt="" />
+              <h3 class="font-bold md:text-xl">Donate Bangladesh</h3>
             </div>
-            <div class="flex items-center gap-3">
-              <img src="./assets/coin.png" alt="" />
+            <div class="flex items-center gap-1 md:gap-3">
+              <img class="w-5 md:w-10" src="./assets/coin.png" alt="" />
               <p class="font-bold">
                 <span id="total-donate-amount">15500</span>
                 BDT
@@ -48,7 +50,7 @@
           </div>
         </div>
         <!-- button section starts-->
-        <div class="w-10/12 mx-auto flex justify-center my-10 gap-3">
+        <div class="w-10/12 mx-auto flex justify-center my-8 gap-3">
           <button
             id="donation-btn"
             class="btn btn-outline bg-primary text-gray-700 font-bold"
@@ -64,6 +66,7 @@
         </div>
         <!-- button section ends -->
       </nav>
+       <!-- nav bar ends -->
 
       <!-- donation card section -->
       <section
@@ -75,7 +78,7 @@
           <div class="hero">
             <div class="hero-content flex-col lg:flex-row">
               <img src="./assets/noakhali.png" class="rounded-xl shadow-2xl" />
-              <div class="w-8/12 ml-8 space-y-4">
+              <div class="w-11/12 md:w-8/12 ml-8 space-y-4">
                 <div
                   class="flex items-center gap-1 my-3 bg-gray-200 p-2 rounded-lg w-28"
                 >
@@ -87,7 +90,7 @@
                 <h1 class="text-xl font-bold">
                   Donate for Flood at Noakhali, Bangladesh
                 </h1>
-                <p class="w-11/12">
+                <p class="w-full md:w-11/12">
                   The recent floods in Noakhali have caused significant damage
                   to homes infrastructure. Your donation will help provide
                   essential supplies and to those affected by this disaster.
@@ -118,7 +121,7 @@
           <div class="hero">
             <div class="hero-content flex-col lg:flex-row">
               <img src="./assets/feni.png" class="rounded-xl shadow-2xl" />
-              <div class="w-8/12 ml-8 space-y-4">
+              <div class="w-11/12 md:w-8/12 ml-8 space-y-4">
                 <div
                   class="flex items-center gap-1 my-3 bg-gray-200 p-2 rounded-lg w-28"
                 >
@@ -130,7 +133,7 @@
                 <h1 class="text-xl font-bold">
                   Donate for Flood Relief in Feni,Bangladesh
                 </h1>
-                <p class="w-11/12">
+                <p class="w-full md:w-11/12">
                   The recent floods in Feni have devastated local communities,
                   leading to severe disruption and loss. Your generous donation
                   will help provide immediate aid, including food, clean water,
@@ -166,7 +169,7 @@
                 src="./assets/quota-protest.png"
                 class="rounded-xl shadow-2xl"
               />
-              <div class="w-8/12 ml-8 space-y-4">
+              <div class="w-11/12 md:w-8/12 ml-8 space-y-4">
                 <div
                   class="flex items-center gap-1 my-3 bg-gray-200 p-2 rounded-lg w-28"
                 >
@@ -178,7 +181,7 @@
                 <h1 class="text-xl font-bold">
                   Aid for Injured in the Quota Movement
                 </h1>
-                <p class="w-11/12">
+                <p class="w-full md:w-11/12">
                   The recent Quota movement has resulted in numerous injuries
                   and significant hardship for many individuals. Your support is
                   crucial in providing medical assistance, rehabilitation, and
@@ -209,7 +212,7 @@
       </section>
 
       <!-- modals section starts-->
-      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <dialog id="my_modal_5" class="modal sm:modal-middle w-4/6  mx-auto">
         <div class="modal-box text-center">
           <h3 class="text-3xl font-extrabold">Congrats!</h3>
           <img class="w-14 mx-auto mt-4" src="./assets/coin.png" alt="" />

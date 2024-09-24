@@ -16,6 +16,85 @@
       src="https://kit.fontawesome.com/bc264e26dd.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .bg-primary {
+        background-color: #b4f461;
+      }
+      .bg-secondary {
+        background-color: #f9f7f3;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <!-- nav bar starts -->
+      <nav class="sticky top-0 z-50">
+        <div class="bg-secondary">
+          <div class="flex justify-between items-center py-5 w-11/12 md:w-10/12 mx-auto">
+            <div>
+              <a href="./index.html">
+                <button id="blog-btn" class="btn bg-primary font-bold">
+                  Home
+                </button>
+              </a>
+            </div>
+            <div class="flex items-center gap-1 md:gap-3">
+              <img  class="w-8 md:w-14"  src="./assets/logo.png" alt="" />
+              <h3 class="font-bold md:text-xl">Donate Bangladesh</h3>
+            </div>
+            <div class="flex items-center gap-1 md:gap-3">
+              <img class="w-5 md:w-10" src="./assets/coin.png" alt="" />
+              <p class="font-bold">
+                <span id="total-donate-amount">15500</span>
+                BDT
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- nav bar ends -->
+      <section class=" space-y-4 w-10/12 md:w-8/12 mx-auto my-16">
+        <div class="collapse collapse-arrow bg-white shadow-lg px-8">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+                The DOM helps make websites interactive and more interesting to use. It turns the page into a tree of objects, where everything like text, images, and buttons are parts of this tree. By using JavaScript, you can change these parts—like adding new text, changing colors, or hiding buttons.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white shadow-lg px-8">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>There are multiple ways to select an element from the DOM using JavaScript,anyone can use getElementById('idName'), getElementsByClassName('className'), and querySelector('selectorType') or querySelectorAll('selectorType') to select elements using CSS-style selectors.These methods help access webpage elements.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white shadow-lg px-8">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+                Event delegation is a technique in the DOM where a parent element handles events for its child elements. Instead of adding event listeners to each child, you add one to the parent. This is useful because it saves memory, simplifies code, and works even for dynamically added child elements.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white shadow-lg px-8">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>Anyone can manipulate an element's attributes using setAttribute() to change things like id or class.To change styles,you modify the style property,such as element.style.backgroundColor = "blue";.This allows you to update how the element appears or interacts with users dynamically.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/home.js"></script>
+    <script src="./js/utility.js"></script>
+  </body>
 </html>
